@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80907e0d-b7a4-4751-ad0d-1d534a7b686a" name="Changes" comment="Fix Typo">
+    <list default="true" id="80907e0d-b7a4-4751-ad0d-1d534a7b686a" name="Changes" comment="Add fishing process">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/BurnTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/BurnTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Furnace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Furnace.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Pot.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/foods/Fish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/foods/Fish.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/foods/RoastedFish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/foods/RoastedFish.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +46,9 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "プロジェクト",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
     "vue.rearranger.settings.migration": "true"
   }
@@ -93,7 +89,7 @@
       <workItem from="1701148714672" duration="3710000" />
       <workItem from="1701305080060" duration="4934000" />
       <workItem from="1701441972847" duration="676000" />
-      <workItem from="1701477665583" duration="1706000" />
+      <workItem from="1701477665583" duration="2924000" />
     </task>
     <task id="LOCAL-00001" summary="Fix Typo">
       <option name="closed" value="true" />
@@ -103,7 +99,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701478027458</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add fishing process">
+      <option name="closed" value="true" />
+      <created>1701479696328</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701479696328</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,6 +126,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fix Typo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix Typo" />
+    <MESSAGE value="Add fishing process" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add fishing process" />
   </component>
 </project>

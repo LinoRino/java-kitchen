@@ -4,7 +4,7 @@ import models.Player;
 import models.foods.Fish;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         Player player = new Player("Steve");
         for (int i = 0; i < 10; i++) {
             Fish fish = player.fish();
