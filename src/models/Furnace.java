@@ -3,7 +3,7 @@ package models;
 public class Furnace {
     private boolean isLit;
     private int progress;
-    private final int maxProgress = 10;
+    public final int maxProgress = 10;
     private Ingredient ingredient;
 
     public Furnace() {
@@ -20,6 +20,10 @@ public class Furnace {
             throw new IllegalArgumentException("Ingredient cannot be null");
         }
         this.ingredient = ingredient;
+    }
+
+    public Ingredient getIngredient() {
+        return ingredient;
     }
 
     public void increaseProgress(int progress) {

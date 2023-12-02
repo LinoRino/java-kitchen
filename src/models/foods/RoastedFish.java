@@ -12,7 +12,7 @@ public class RoastedFish extends Ingredient implements Eatable {
     private boolean isEaten = false;
 
     public RoastedFish() {
-        super("Roasted fish", 4, 3);
+        super("Roasted fish", 4);
     }
 
     @Override

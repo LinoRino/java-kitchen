@@ -6,7 +6,7 @@ import models.Roastable;
 
 public class Fish extends Ingredient implements Roastable {
     public Fish() {
-        super("Fish", 2, 1);
+        super("Fish", 2);
     }
 
     @Override

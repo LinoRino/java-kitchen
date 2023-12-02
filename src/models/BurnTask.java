@@ -9,13 +9,15 @@ public class BurnTask extends Thread {
 
     @Override
     public void run() {
-        while (this.furnace.getStatus() == FurnaceStatus.BURNING) {
+        System.out.printf("Burning %s with %s...", furnace.getIngredient().getName(), furnace.getClass().getSimpleName());
+        for (int i = 0; i < furnace.maxProgress; i++) {
             try {
-                Thread.sleep(1000);
+                sleep(1000);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
             this.furnace.increaseProgress(1);
         }
+        System.out.println("Done!");
     }
 }

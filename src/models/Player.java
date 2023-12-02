@@ -13,6 +13,10 @@ public class Player {
         this.name = name;
     }
 
+    public ArrayList<Ingredient> getInventory() {
+        return inventory;
+    }
+
     public void eat(Eatable eatable) {
         eatable.eat(this);
         System.out.printf("%s ate %s\n", this.name, eatable.getClass().getSimpleName());
