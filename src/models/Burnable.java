@@ -1,5 +1,5 @@
 package models;
 
 public interface Burnable {
-    Ingredient burnable(Furnace furnace);
+    Ingredient onBurn(Furnace furnace);
 }

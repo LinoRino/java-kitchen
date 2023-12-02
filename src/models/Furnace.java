@@ -71,7 +71,7 @@ public class Furnace implements Runnable {
             System.out.printf("Progress: %d/%d\n", getProgress(), Furnace.maxProgress);
         }
         System.out.println("Done!");
-        ingredient = burnable.burnable(this);
+        ingredient = burnable.onBurn(this);
     }
 
 }

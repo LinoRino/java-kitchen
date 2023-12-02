@@ -10,7 +10,7 @@ public class Fish extends Ingredient implements Burnable {
     }
 
     @Override
-    public Ingredient burnable(Furnace furnace) {
+    public Ingredient onBurn(Furnace furnace) {
         return new RoastedFish();
     }
 }
