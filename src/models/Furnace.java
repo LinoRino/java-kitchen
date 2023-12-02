@@ -1,18 +1,16 @@
 package models;
 
-public class Furnace {
-    private boolean isLit;
-    private int progress;
-    public final int maxProgress = 10;
+public class Furnace implements Runnable {
+    private boolean isLit = false;
+    private int progress = 0;
+    public static final int maxProgress = 10;
     private Ingredient ingredient;
 
     public Furnace() {
-        this.isLit = false;
-        this.progress = 0;
         this.ingredient = null;
     }
 
-    public void setIngredient(Ingredient ingredient) {
+    public void put(Ingredient ingredient) {
         if (this.getStatus() != FurnaceStatus.EMPTY) {
             throw new IllegalStateException("Furnace is not empty");
         }
@@ -26,6 +24,10 @@ public class Furnace {
         return ingredient;
     }
 
+    public int getProgress() {
+        return progress;
+    }
+
     public void increaseProgress(int progress) {
         if (this.getStatus() != FurnaceStatus.BURNING) {
             throw new IllegalStateException("Furnace is not burning");
@@ -33,7 +35,7 @@ public class Furnace {
         if (progress < 0) {
             throw new IllegalArgumentException("Progress cannot be negative");
         }
-        if (this.progress + progress > this.maxProgress) {
+        if (this.progress + progress > maxProgress) {
             throw new IllegalArgumentException("Progress cannot exceed max progress");
         }
         this.progress += progress;
@@ -43,29 +45,36 @@ public class Furnace {
         if (this.ingredient == null) {
             return FurnaceStatus.EMPTY;
         }
-        if (this.progress == 0) {
-            return FurnaceStatus.FULL;
-        }
-        if (this.progress < this.maxProgress) {
+        if (this.isLit && this.progress < maxProgress) {
             return FurnaceStatus.BURNING;
         }
-        return FurnaceStatus.BURNT;
+        if (progress > maxProgress) return FurnaceStatus.BURNT;
+        return FurnaceStatus.FULL;
     }
 
-    private void start() {
-        if (this.getStatus() != FurnaceStatus.FULL) {
+    public void run() {
+        if (getStatus() != FurnaceStatus.FULL) {
             throw new IllegalStateException("Furnace is not full");
         }
-        if (!(this.ingredient instanceof Roastable roastable)) {
+        if (!(ingredient instanceof Burnable burnable)) {
             throw new IllegalStateException("Ingredient is not roastable");
         }
-        this.isLit = true;
-        BurnTask burnTask = new BurnTask(this);
-        burnTask.start();
-        this.ingredient = roastable.roast(this);
+        isLit = true;
+        System.out.printf("Burning %s with %s...\n", getIngredient().getName(), getClass().getSimpleName());
+        for (int i = 0; i < Furnace.maxProgress; i++) {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            increaseProgress(1);
+            System.out.printf("Progress: %d/%d\n", getProgress(), Furnace.maxProgress);
+        }
+        System.out.println("Done!");
+        ingredient = burnable.burnable(this);
     }
 
-    public Ingredient pickIngredient() {
+    public Ingredient pick() {
         if (this.ingredient == null) {
             throw new IllegalStateException("Furnace is empty");
         }
@@ -74,6 +83,7 @@ public class Furnace {
         }
         Ingredient result = this.ingredient.clone();
         this.ingredient = null;
+        this.progress = 0;
         return result;
     }
 }

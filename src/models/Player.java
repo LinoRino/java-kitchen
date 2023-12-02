@@ -30,7 +30,7 @@ public class Player {
         System.out.printf("%s is fishing.\n", this.name);
         Random random = new Random();
         int randomInt = random.nextInt(100);
-        Thread.sleep(1000);
+        Thread.sleep(800);
         if (randomInt < 50) {
             System.out.printf("%s failed to fish.\n", this.name);
             return null;

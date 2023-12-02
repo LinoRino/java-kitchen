@@ -13,9 +13,6 @@ public abstract class Ingredient implements Cloneable {
         return this.name;
     }
 
-    public int getEnergy() {
-        return this.energy;
-    }
 
     @Override
     public Ingredient clone() {
