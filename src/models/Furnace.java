@@ -13,7 +13,7 @@ public class Furnace {
     }
 
     public void setIngredient(Ingredient ingredient) {
-        if (this.getStatus() != FurnanceStatus.EMPTY) {
+        if (this.getStatus() != FurnaceStatus.EMPTY) {
             throw new IllegalStateException("Furnace is not empty");
         }
         if (ingredient == null) {
@@ -23,7 +23,7 @@ public class Furnace {
     }
 
     public void increaseProgress(int progress) {
-        if (this.getStatus() != FurnanceStatus.BURNING) {
+        if (this.getStatus() != FurnaceStatus.BURNING) {
             throw new IllegalStateException("Furnace is not burning");
         }
         if (progress < 0) {
@@ -35,33 +35,21 @@ public class Furnace {
         this.progress += progress;
     }
 
-    public boolean isLit() {
-        return isLit;
-    }
-
-    public int getProgress() {
-        return progress;
-    }
-
-    public FurnanceStatus getStatus() {
+    public FurnaceStatus getStatus() {
         if (this.ingredient == null) {
-            return FurnanceStatus.EMPTY;
+            return FurnaceStatus.EMPTY;
         }
         if (this.progress == 0) {
-            return FurnanceStatus.FULL;
+            return FurnaceStatus.FULL;
         }
         if (this.progress < this.maxProgress) {
-            return FurnanceStatus.BURNING;
+            return FurnaceStatus.BURNING;
         }
-        return FurnanceStatus.BURNT;
-    }
-
-    public Ingredient getIngredient() {
-        return ingredient;
+        return FurnaceStatus.BURNT;
     }
 
     private void start() {
-        if (this.getStatus() != FurnanceStatus.FULL) {
+        if (this.getStatus() != FurnaceStatus.FULL) {
             throw new IllegalStateException("Furnace is not full");
         }
         if (!(this.ingredient instanceof Roastable roastable)) {
@@ -77,7 +65,7 @@ public class Furnace {
         if (this.ingredient == null) {
             throw new IllegalStateException("Furnace is empty");
         }
-        if (this.getStatus() != FurnanceStatus.BURNT) {
+        if (this.getStatus() != FurnaceStatus.BURNT) {
             throw new IllegalStateException("Furnace is not done");
         }
         Ingredient result = this.ingredient.clone();

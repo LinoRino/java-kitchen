@@ -1,7 +1,7 @@
 package models;
 
 public class BurnTask extends Thread {
-    private Furnace furnace;
+    private final Furnace furnace;
 
     public BurnTask(Furnace furnace) {
         this.furnace = furnace;
@@ -9,11 +9,11 @@ public class BurnTask extends Thread {
 
     @Override
     public void run() {
-        while (this.furnace.getStatus() == FurnanceStatus.BURNING) {
+        while (this.furnace.getStatus() == FurnaceStatus.BURNING) {
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                throw new RuntimeException(e);
             }
             this.furnace.increaseProgress(1);
         }
