@@ -2,11 +2,9 @@ package models;
 
 public abstract class Ingredient implements Cloneable {
     private final String name;
-    private final int energy;
 
-    public Ingredient(String name, int energy) {
+    public Ingredient(String name) {
         this.name = name;
-        this.energy = energy;
     }
 
     public String getName() {

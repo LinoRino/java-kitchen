@@ -6,7 +6,7 @@ import models.Burnable;
 
 public class Fish extends Ingredient implements Burnable {
     public Fish() {
-        super("Fish", 2);
+        super("Fish");
     }
 
     @Override

@@ -74,16 +74,4 @@ public class Furnace implements Runnable {
         ingredient = burnable.burnable(this);
     }
 
-    public Ingredient pick() {
-        if (this.ingredient == null) {
-            throw new IllegalStateException("Furnace is empty");
-        }
-        if (this.getStatus() != FurnaceStatus.BURNT) {
-            throw new IllegalStateException("Furnace is not done");
-        }
-        Ingredient result = this.ingredient.clone();
-        this.ingredient = null;
-        this.progress = 0;
-        return result;
-    }
 }
