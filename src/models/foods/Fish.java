@@ -1,8 +1,8 @@
 package models.foods;
 
+import models.Burnable;
 import models.Furnace;
 import models.Ingredient;
-import models.Burnable;
 
 public class Fish extends Ingredient implements Burnable {
     public Fish() {
