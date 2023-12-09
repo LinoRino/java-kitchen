@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80907e0d-b7a4-4751-ad0d-1d534a7b686a" name="Changes" comment="change Storable.java to Storage abstract class" />
+    <list default="true" id="80907e0d-b7a4-4751-ad0d-1d534a7b686a" name="Changes" comment="Add interfaces package">
+      <change afterPath="$PROJECT_DIR$/src/models/Chest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/CookingTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/tasks/CookingTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Furnace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Furnace.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Storage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Storage.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,8 +29,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -90,6 +101,10 @@
       <workItem from="1701477665583" duration="5580000" />
       <workItem from="1701491514697" duration="5183000" />
       <workItem from="1702084000118" duration="6099000" />
+      <workItem from="1702091230629" duration="537000" />
+      <workItem from="1702092194316" duration="2069000" />
+      <workItem from="1702100298406" duration="709000" />
+      <workItem from="1702101243326" duration="2681000" />
     </task>
     <task id="LOCAL-00001" summary="Fix Typo">
       <option name="closed" value="true" />
@@ -171,7 +186,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702090108520</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Add interfaces package">
+      <option name="closed" value="true" />
+      <created>1702091340165</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1702091340166</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,19 +221,15 @@
     <MESSAGE value="Fix problems" />
     <MESSAGE value="Delete unused import" />
     <MESSAGE value="change Storable.java to Storage abstract class" />
-    <option name="LAST_COMMIT_MESSAGE" value="change Storable.java to Storage abstract class" />
+    <MESSAGE value="Add interfaces package" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add interfaces package" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/models/Player.java</url>
-          <line>11</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/models/Furnace.java</url>
-          <line>34</line>
+          <line>43</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>

@@ -7,13 +7,20 @@ public class Furnace extends Storage implements Runnable {
     private int progress = 0;
     public static final int maxProgress = 10;
 
+    public Furnace() {
+        super(1);
+    }
+
     public Furnace(Ingredient ingredient) {
         super(1);
         this.put(ingredient);
     }
 
     public Ingredient getInventory() {
-        return inventory.get(0);
+        if (isEmpty()) {
+            throw new IllegalStateException("Inventory is empty");
+        }
+        return getFirst();
     }
 
     public int getProgress() {
@@ -34,7 +41,7 @@ public class Furnace extends Storage implements Runnable {
     }
 
     public FurnaceStatus getStatus() {
-        if (this.inventory.isEmpty()) {
+        if (isEmpty()) {
             return FurnaceStatus.EMPTY;
         }
         if (this.isLit) {
@@ -64,7 +71,8 @@ public class Furnace extends Storage implements Runnable {
             System.out.printf("Progress: %d/%d\n", getProgress(), Furnace.maxProgress);
         }
         System.out.println("Done!");
-        inventory.set(0, burnable.onBurn(this));
+        drop();
+        put(burnable.onBurn(this));
     }
 
 }
