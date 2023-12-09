@@ -4,18 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80907e0d-b7a4-4751-ad0d-1d534a7b686a" name="Changes" comment="">
+    <list default="true" id="80907e0d-b7a4-4751-ad0d-1d534a7b686a" name="Changes" comment="Change the function name">
+      <change afterPath="$PROJECT_DIR$/src/models/CookingTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/Storable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/BurnTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/BurnTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Eatable.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/Furnace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Furnace.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Ingredient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Ingredient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Roastable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Burnable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/foods/Fish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/foods/Fish.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/foods/RoastedFish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/foods/RoastedFish.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +30,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -59,7 +55,7 @@
     &quot;project.structure.last.edited&quot;: &quot;プロジェクト&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -100,7 +96,8 @@
       <workItem from="1701305080060" duration="4934000" />
       <workItem from="1701441972847" duration="676000" />
       <workItem from="1701477665583" duration="5580000" />
-      <workItem from="1701491514697" duration="3282000" />
+      <workItem from="1701491514697" duration="5183000" />
+      <workItem from="1702084000118" duration="3911000" />
     </task>
     <task id="LOCAL-00001" summary="Fix Typo">
       <option name="closed" value="true" />
@@ -126,7 +123,31 @@
       <option name="project" value="LOCAL" />
       <updated>1701481178755</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Improve cooking experience">
+      <option name="closed" value="true" />
+      <created>1701497704662</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1701497704662</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Fix problems">
+      <option name="closed" value="true" />
+      <created>1701498727716</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1701498727716</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Change the function name">
+      <option name="closed" value="true" />
+      <created>1701499280285</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1701499280285</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,7 +168,10 @@
     <MESSAGE value="Fix Typo" />
     <MESSAGE value="Add fishing process" />
     <MESSAGE value="Add sleep to fish method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add sleep to fish method" />
+    <MESSAGE value="Improve cooking experience" />
+    <MESSAGE value="Fix problems" />
+    <MESSAGE value="Change the function name" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change the function name" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -159,8 +183,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/models/Furnace.java</url>
-          <line>44</line>
+          <line>53</line>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/models/Furnace.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

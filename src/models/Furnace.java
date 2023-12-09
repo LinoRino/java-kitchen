@@ -1,13 +1,15 @@
 package models;
 
-public class Furnace implements Runnable {
+import java.util.ArrayList;
+
+public class Furnace implements Runnable, Storable {
     private boolean isLit = false;
     private int progress = 0;
     public static final int maxProgress = 10;
-    private Ingredient ingredient;
+    private final ArrayList<Ingredient> inventory = new ArrayList<>();
 
-    public Furnace() {
-        this.ingredient = null;
+    public Furnace(Ingredient inventory) {
+        this.put(inventory);
     }
 
     public void put(Ingredient ingredient) {
@@ -17,11 +19,18 @@ public class Furnace implements Runnable {
         if (ingredient == null) {
             throw new IllegalArgumentException("Ingredient cannot be null");
         }
-        this.ingredient = ingredient;
+        this.inventory.add(ingredient);
     }
 
-    public Ingredient getIngredient() {
-        return ingredient;
+    public Ingredient drop() {
+        if (this.getStatus() != FurnaceStatus.BURNT) {
+            throw new IllegalStateException("Furnace is not burnt");
+        }
+        return this.inventory.remove(0);
+    }
+
+    public Ingredient getInventory() {
+        return inventory.get(0);
     }
 
     public int getProgress() {
@@ -42,17 +51,18 @@ public class Furnace implements Runnable {
     }
 
     public FurnaceStatus getStatus() {
-        if (this.ingredient == null) {
+        if (this.inventory.isEmpty()) {
             return FurnaceStatus.EMPTY;
         }
-        if (this.isLit && this.progress < maxProgress) {
+        if (this.isLit) {
+            if (progress >= maxProgress) return FurnaceStatus.BURNT;
             return FurnaceStatus.BURNING;
         }
-        if (progress > maxProgress) return FurnaceStatus.BURNT;
         return FurnaceStatus.FULL;
     }
 
     public void run() {
+        Ingredient ingredient = getInventory();
         if (getStatus() != FurnaceStatus.FULL) {
             throw new IllegalStateException("Furnace is not full");
         }
@@ -60,7 +70,7 @@ public class Furnace implements Runnable {
             throw new IllegalStateException("Ingredient is not roastable");
         }
         isLit = true;
-        System.out.printf("Burning %s with %s...\n", getIngredient().getName(), getClass().getSimpleName());
+        System.out.printf("Burning %s with %s...\n", ingredient.getName(), getClass().getSimpleName());
         for (int i = 0; i < Furnace.maxProgress; i++) {
             try {
                 Thread.sleep(1000);
@@ -71,7 +81,7 @@ public class Furnace implements Runnable {
             System.out.printf("Progress: %d/%d\n", getProgress(), Furnace.maxProgress);
         }
         System.out.println("Done!");
-        ingredient = burnable.onBurn(this);
+        inventory.set(0, burnable.onBurn(this));
     }
 
 }
