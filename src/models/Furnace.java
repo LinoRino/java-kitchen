@@ -11,11 +11,6 @@ public class Furnace extends Storage implements Runnable {
         super(1);
     }
 
-    public Furnace(Ingredient ingredient) {
-        super(1);
-        this.put(ingredient);
-    }
-
     public Ingredient getInventory() {
         if (isEmpty()) {
             throw new IllegalStateException("Inventory is empty");
