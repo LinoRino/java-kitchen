@@ -6,7 +6,6 @@ public class Furnace implements Runnable, Storable {
     private boolean isLit = false;
     private int progress = 0;
     public static final int maxProgress = 10;
-    private final ArrayList<Ingredient> inventory = new ArrayList<>();
 
     public Furnace(Ingredient inventory) {
         this.put(inventory);

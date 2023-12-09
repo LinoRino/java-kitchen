@@ -7,7 +7,6 @@ import java.util.Random;
 
 public class Player implements Storable {
     public final String name;
-    private final ArrayList<Ingredient> inventory = new ArrayList<>();
     public Player(String name) {
         this.name = name;
     }

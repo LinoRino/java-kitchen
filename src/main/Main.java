@@ -5,7 +5,6 @@ import models.Furnace;
 import models.Notification;
 import models.Player;
 import models.foods.Fish;
-import models.foods.RoastedFish;
 
 import java.util.concurrent.TimeUnit;
 
