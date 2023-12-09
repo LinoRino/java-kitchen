@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80907e0d-b7a4-4751-ad0d-1d534a7b686a" name="Changes" comment="Delete unused import">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Furnace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Furnace.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Storable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Storage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/foods/Fish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/foods/Fish.java" afterDir="false" />
-    </list>
+    <list default="true" id="80907e0d-b7a4-4751-ad0d-1d534a7b686a" name="Changes" comment="change Storable.java to Storage abstract class" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -95,7 +89,7 @@
       <workItem from="1701441972847" duration="676000" />
       <workItem from="1701477665583" duration="5580000" />
       <workItem from="1701491514697" duration="5183000" />
-      <workItem from="1702084000118" duration="5753000" />
+      <workItem from="1702084000118" duration="6099000" />
     </task>
     <task id="LOCAL-00001" summary="Fix Typo">
       <option name="closed" value="true" />
@@ -169,7 +163,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702088380508</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="change Storable.java to Storage abstract class">
+      <option name="closed" value="true" />
+      <created>1702090108520</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1702090108520</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,7 +197,8 @@
     <MESSAGE value="Cook fish in parallel" />
     <MESSAGE value="Fix problems" />
     <MESSAGE value="Delete unused import" />
-    <option name="LAST_COMMIT_MESSAGE" value="Delete unused import" />
+    <MESSAGE value="change Storable.java to Storage abstract class" />
+    <option name="LAST_COMMIT_MESSAGE" value="change Storable.java to Storage abstract class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

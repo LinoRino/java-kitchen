@@ -1,6 +1,6 @@
 package models.foods;
 
-import models.Burnable;
+import interfaces.Burnable;
 import models.Furnace;
 import models.Ingredient;
 

@@ -1,5 +1,7 @@
 package models;
 
+import interfaces.Burnable;
+
 public class Furnace extends Storage implements Runnable {
     private boolean isLit = false;
     private int progress = 0;
