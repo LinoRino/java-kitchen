@@ -1,7 +1,5 @@
 package models;
 
-import java.util.ArrayList;
-
 public class Furnace implements Runnable, Storable {
     private boolean isLit = false;
     private int progress = 0;
