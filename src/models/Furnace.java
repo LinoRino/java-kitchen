@@ -1,29 +1,13 @@
 package models;
 
-public class Furnace implements Runnable, Storable {
+public class Furnace extends Storage implements Runnable {
     private boolean isLit = false;
     private int progress = 0;
     public static final int maxProgress = 10;
 
-    public Furnace(Ingredient inventory) {
-        this.put(inventory);
-    }
-
-    public void put(Ingredient ingredient) {
-        if (this.getStatus() != FurnaceStatus.EMPTY) {
-            throw new IllegalStateException("Furnace is not empty");
-        }
-        if (ingredient == null) {
-            throw new IllegalArgumentException("Ingredient cannot be null");
-        }
-        this.inventory.add(ingredient);
-    }
-
-    public Ingredient drop() {
-        if (this.getStatus() != FurnaceStatus.BURNT) {
-            throw new IllegalStateException("Furnace is not burnt");
-        }
-        return this.inventory.remove(0);
+    public Furnace(Ingredient ingredient) {
+        super(1);
+        this.put(ingredient);
     }
 
     public Ingredient getInventory() {

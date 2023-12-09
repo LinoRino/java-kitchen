@@ -5,9 +5,10 @@ import models.foods.Fish;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class Player implements Storable {
+public class Player extends Storage {
     public final String name;
     public Player(String name) {
+        super(36);
         this.name = name;
     }
 

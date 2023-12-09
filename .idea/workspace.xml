@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80907e0d-b7a4-4751-ad0d-1d534a7b686a" name="Changes" comment="Change the function name">
-      <change afterPath="$PROJECT_DIR$/src/models/CookingTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/Storable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="80907e0d-b7a4-4751-ad0d-1d534a7b686a" name="Changes" comment="Delete unused import">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/Furnace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Furnace.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Storable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Storage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/foods/Fish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/foods/Fish.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +95,7 @@
       <workItem from="1701441972847" duration="676000" />
       <workItem from="1701477665583" duration="5580000" />
       <workItem from="1701491514697" duration="5183000" />
-      <workItem from="1702084000118" duration="3911000" />
+      <workItem from="1702084000118" duration="5753000" />
     </task>
     <task id="LOCAL-00001" summary="Fix Typo">
       <option name="closed" value="true" />
@@ -147,7 +145,31 @@
       <option name="project" value="LOCAL" />
       <updated>1701499280285</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Cook fish in parallel">
+      <option name="closed" value="true" />
+      <created>1702088172522</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1702088172522</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Fix problems">
+      <option name="closed" value="true" />
+      <created>1702088342319</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1702088342319</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Delete unused import">
+      <option name="closed" value="true" />
+      <created>1702088380508</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1702088380508</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,9 +191,11 @@
     <MESSAGE value="Add fishing process" />
     <MESSAGE value="Add sleep to fish method" />
     <MESSAGE value="Improve cooking experience" />
-    <MESSAGE value="Fix problems" />
     <MESSAGE value="Change the function name" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change the function name" />
+    <MESSAGE value="Cook fish in parallel" />
+    <MESSAGE value="Fix problems" />
+    <MESSAGE value="Delete unused import" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delete unused import" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -183,13 +207,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/models/Furnace.java</url>
-          <line>53</line>
+          <line>34</line>
           <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/models/Furnace.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
